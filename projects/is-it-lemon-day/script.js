@@ -1,4 +1,4 @@
-const currentDate = new Date('Jan 13, 2020');
+const currentDate = new Date();
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const announcementText = document.getElementById('announcement');

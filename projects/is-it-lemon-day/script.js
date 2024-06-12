@@ -21,7 +21,7 @@ function checkLemonDate(_date) {
         announcementText.innerHTML = "It is lemon day in places that use either the MM/DD or DD/MM format!";
         appendLemon("lemonMD");
         appendLemon("lemonDM");
-        //Note: This is impossible. But in the unlikely
+        //Note: This is impossible. But in the very unlikely
         //event that it happens, it's here.
     }
     else if (isLemonDayMD == true) {

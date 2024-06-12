@@ -4,9 +4,14 @@ const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const announcementText = document.getElementById('announcement');
 
 checkLemonDate(currentDate);
-showDates(currentDate)
+showDates(currentDate);
 
 function checkLemonDate(_date) {
+    deleteLemons();
+    if (!_date){
+        announcementText.innerHTML = "error!"
+        return
+    }
     let date = _date.getDate().toString();
     let dayOfWeek = WEEKDAYS[_date.getDay()].toString();
     let month = (_date.getMonth() + 1).toString();
@@ -35,6 +40,9 @@ function checkLemonDate(_date) {
     else if (!isLemonDayDM && !isLemonDayMD) {
         announcementText.innerHTML = "No :(";
     }
+    else{
+        announcementText.innerHTML = "error!"
+    }
 
 }
 
@@ -62,8 +70,25 @@ function showDates(date) {
 function appendLemon(id) {
     var img = document.createElement("img");
     img.src = "lemon.png";
+    img.className = "lemon";
     img.style.height = '100px';
     img.style.width = '100px';
     var src = document.getElementById(id);
     src.appendChild(img)
 }
+
+function deleteLemons() {
+    const elements = document.getElementsByClassName("lemon");
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+
+}
+
+document.getElementById("dateInput").addEventListener("change", function() {
+    var input = this.value;
+    var dateEntered = new Date(input + " ");
+    console.log(input);
+    checkLemonDate(dateEntered);
+    showDates(dateEntered);
+});

@@ -20,32 +20,41 @@
 
         .date {
             font-family: 'DSEG14', Arial, monospace;
-            font-size: larger;
+            font-size: 3em;
         }
     </style>
 </head>
 
 <body class="c">
-    <div class="card">
-        <div class="center">
+    <div class="card center">
+        <div>
             <h1>Is It Lemon Day?</h1>
+
             <p id="announcement">Page requires JavaScript!</p>
         </div>
         <div class="row">
-            <div class="card col" style="text-align: center;">
+            <div class="card col">
                 <div id="lemonMD">
-                    <h2>MM/DD</h2>
                     <p id="dateMD" class="date" style="">1/1/Mon</p>
+                    <p><i>mm/dd</i></p>
                 </div>
             </div>
             <div class="card col" style="text-align: center;">
                 <div id="lemonDM">
-                    <h2>DD/MM</h2>
                     <p id="dateDM" class="date" style="">1/1/Mon</p>
+                    <p><i>dd/mm</i></p>
                 </div>
             </div>
         </div>
-        <a href="what.html">what is lemon day?</a>
+    <a href="what.html">what is lemon day?</a>
+
+    </div>
+    <div class="card">
+        <div class="center">
+            <h1>Is this day Lemon Day?</h1>
+            <p>Please enter a date to find out if it is Lemon Day or not.</p>
+            <input type="date" data-date="" data-date-format="YYYY MM DD" value="2015-08-09" id="dateInput">
+        </div>
     </div>
     <a href="/index.html">home</a>
 

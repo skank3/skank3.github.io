@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/lit.css">
+    <link rel="stylesheet" href="/styles/lit.css">
     <title>Is It Lemon Day?</title>
+    <style>
+        @font-face {
+            font-family: 'LCD';
+            src: url('LCD14.woff2') format('woff2'),
+                url('LCD14.woff') format('woff'),
+                url('LCD14.ttf') format('truetype');
+        }
+        .date {
+            font-family: 'LCD', Arial, monospace;
+            font-size: larger;
+        }
+    </style>
 </head>
-<body>
-    <p id="date">Page requires JavaScript!</p>
+<body class="c">
+    <div class="card">
+        <h1>Is It Lemon Day?</h1>
+        <p id="announcement">Page requires JavaScript!</p>
+        <div class="row">
+            <div id="lemonMD" class="6 col">
+                <h4>MM/DD</h4>
+                <p id="dateMD" class="date" style="">1/1/Mon</p>
+            </div>
+            <div id="lemonDM" class="6 col">
+                <h4>DD/MM</h4>
+                <p id="dateDM" class="date" style="">1/1/Mon</p>
+
+            </div>
+        </div>
+    </div>
+    <a href="what.html">what is lemon day</a>
+
+
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'LCD';
+    src: url('LCD14.woff2') format('woff2'),
+        url('LCD14.woff') format('woff'),
+        url('LCD14.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

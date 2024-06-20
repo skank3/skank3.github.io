@@ -127,3 +127,7 @@ th {
     border: solid;
     font: .7em nunito
 }
+
+@media (prefers-color-scheme: dark) {
+    body { background: #333; color: white; } 
+}
